@@ -1,0 +1,75 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.content{
+	padding:0;
+	margin:0;
+}
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+}
+
+.categories {
+    min-width: 250px;
+    max-width: 250px;
+    margin-left: -250px;
+    border: none;
+    border-radius: 0;
+    padding:0;
+            transition: all 0.5s;
+}
+
+.categories.active {
+    margin-left: 0;
+}
+
+.categories ul.components {
+    padding-left:0;
+    padding-top: 20px;
+}
+
+.categories ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+.categories ul li.active>a,
+a[aria-expanded="true"] {
+    color: white;
+    background: black;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+
+/* список подкатегорий в сайдбаре */
+.categories ul ul a {
+    font-size: 0.9em;
+    padding-left: 30px;
+    background: white;
+}
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .categories{
+        width:100%;
+    }
+}
