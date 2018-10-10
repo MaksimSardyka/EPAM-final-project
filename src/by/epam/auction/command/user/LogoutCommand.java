@@ -1,10 +1,12 @@
-package by.epam.auction.command;
+package by.epam.auction.command.user;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import by.epam.auction.command.page.PageList;
+import by.epam.auction.command.Command;
+import by.epam.auction.command.CommandType;
+import by.epam.auction.command.page.ViewPage;
 import by.epam.auction.content.SessionRequestContent;
 import by.epam.auction.service.UserService;
 
@@ -20,7 +22,7 @@ public class LogoutCommand implements Command {
     private static final Logger LOG = LogManager.getLogger();
 
     /**
-     * Service to work with DAO.
+     * Service to work with user.
      */
     UserService service;
 
@@ -28,7 +30,7 @@ public class LogoutCommand implements Command {
      * Constructor.
      * 
      * @param receiver
-     *            Service to use to work with DAO.
+     *            Service to use to work with user.
      */
     public LogoutCommand(UserService receiver) {
         this.service = receiver;
@@ -38,11 +40,11 @@ public class LogoutCommand implements Command {
      * Operation to perform on logout.
      */
     @Override
-    public PageList execute(SessionRequestContent content) {
+    public ViewPage execute(SessionRequestContent content) {
         LOG.log(Level.DEBUG, "Perform " + CommandType.LOG_OUT.name());
         
         //TODO session invalidate here???
         content.removeSessionAttribute(USER);
-        return PageList.LOGIN_PAGE;
+        return ViewPage.LOGIN_PAGE;
     }
 }

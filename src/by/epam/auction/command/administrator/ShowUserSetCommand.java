@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 import by.epam.auction.command.Command;
 import by.epam.auction.command.CommandType;
-import by.epam.auction.command.page.PageList;
+import by.epam.auction.command.page.ViewPage;
 import by.epam.auction.content.SessionRequestContent;
 import by.epam.auction.service.AdministratorService;
 
@@ -23,12 +23,12 @@ public class ShowUserSetCommand implements Command{
     }
     
     @Override
-    public PageList execute(SessionRequestContent requestContent) {
+    public ViewPage execute(SessionRequestContent requestContent) {
         LOG.log(Level.DEBUG, "Perform " + CommandType.BlOCK_USER.name());
         
         
         
-        return PageList.ADMIN_PAGE;
+        return ViewPage.ADMIN_PAGE;
     }
 
 }

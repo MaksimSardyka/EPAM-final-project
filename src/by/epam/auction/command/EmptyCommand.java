@@ -4,7 +4,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import by.epam.auction.command.page.PageList;
+import by.epam.auction.command.page.ViewPage;
 import by.epam.auction.constant.ParsingValues;
 import by.epam.auction.content.SessionRequestContent;
 
@@ -21,13 +21,13 @@ public class EmptyCommand implements Command {
      * Perform Empty command.
      */
     @Override
-    public PageList execute(final SessionRequestContent requestContent) {
+    public ViewPage execute(final SessionRequestContent requestContent) {
         LOG.log(Level.DEBUG, "Perform " + CommandType.EMPTY_COMMAND.name());
-        PageList page = PageList.NULL_PAGE;
+        ViewPage page = ViewPage.NULL_PAGE;
         
         if (requestContent.getSessionAttributeValue(ParsingValues.USER) != null
                 && requestContent.getSessionAttributeValue(ParsingValues.PREVIOUS_PAGE) != null) {
-            page = (PageList) requestContent.getSessionAttributeValue(ParsingValues.PREVIOUS_PAGE);
+            page = (ViewPage) requestContent.getSessionAttributeValue(ParsingValues.PREVIOUS_PAGE);
         } else {
         	//TODO session invalidate here
         }

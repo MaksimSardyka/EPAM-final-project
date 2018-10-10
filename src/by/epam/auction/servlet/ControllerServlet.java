@@ -15,9 +15,8 @@ import org.apache.logging.log4j.Logger;
 
 import by.epam.auction.command.Command;
 import by.epam.auction.command.CommandType;
-import by.epam.auction.command.exception.CommandException;
 import by.epam.auction.command.factory.CommandFactory;
-import by.epam.auction.command.page.PageList;
+import by.epam.auction.command.page.ViewPage;
 import by.epam.auction.constant.ParsingValues;
 import by.epam.auction.content.SessionRequestContent;
 import by.epam.auction.dao.pool.ConnectionPool;
@@ -87,29 +86,21 @@ public class ControllerServlet extends HttpServlet {
         SessionRequestContent requestContent = new SessionRequestContent(request);
         
         Command command = new CommandFactory().defineCommand(requestContent);
-        Optional<PageList> pageOptional = Optional.empty();
-        try {
-        	pageOptional = Optional.ofNullable(command.execute(requestContent));
-        } catch (CommandException e) {
-        	LOG.log(Level.ERROR, "command error.");
-        }
+        Optional<ViewPage> pageOptional = Optional.ofNullable(command.execute(requestContent));
         
         LOG.log(Level.DEBUG, "Extract all request attributes from the temporary storage");
         requestContent.insertAttributes(request);
         
+        
+        ViewPage previousPage = (ViewPage)requestContent.getSessionAttributeValue(ParsingValues.PREVIOUS_PAGE);
         if(pageOptional.isPresent()) {
         	LOG.log(Level.INFO, "Save previous page:" + pageOptional.get());
         	requestContent.insertSessionAttribute(ParsingValues.PREVIOUS_PAGE, pageOptional.get());
-        } else if(requestContent.getSessionAttributeValue(ParsingValues.PREVIOUS_PAGE) != null) {
+        } else if(previousPage != null) {
         	LOG.log(Level.INFO, "Forward back.");
-        	pageOptional = Optional.of((PageList)requestContent.getSessionAttributeValue(ParsingValues.PREVIOUS_PAGE));
+        	pageOptional = Optional.of(previousPage);
         } else {
-        	try {
-				pageOptional = Optional.ofNullable(CommandType.EMPTY_COMMAND.getCommand().execute(requestContent));
-			} catch (CommandException e) {
-				LOG.log(Level.ERROR, "unable to perform null command");
-				response.sendError(500);
-			}
+        	pageOptional = Optional.of(CommandType.EMPTY_COMMAND.getCommand().execute(requestContent));
         }
         
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pageOptional.get().getPath());

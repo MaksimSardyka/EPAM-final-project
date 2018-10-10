@@ -8,26 +8,25 @@ import org.apache.logging.log4j.Logger;
 
 import by.epam.auction.command.Command;
 import by.epam.auction.command.CommandType;
-import by.epam.auction.command.exception.CommandException;
 import by.epam.auction.constant.ParsingValues;
 import by.epam.auction.content.SessionRequestContent;
 import by.epam.auction.domain.Lot;
 import by.epam.auction.service.LotService;
 import by.epam.auction.service.exception.ServiceException;
-import by.epam.auction.validator.Parser;
+import by.epam.auction.validator.InputParser;
 import by.epam.auction.validator.exception.WrongInputException;
 
 /**
  * Command to show lot.
  */
-public class LotPage implements Command {
+public class ViewLot implements Command {
 	/**
 	 * Logger for this class.
 	 */
 	private static final Logger LOG = LogManager.getLogger();
 
 	/**
-	 * Service to work with DAO.
+	 * Service to work with lot.
 	 */
 	LotService service;
 
@@ -35,9 +34,9 @@ public class LotPage implements Command {
 	 * Constructor.
 	 *
 	 * @param service
-	 *            Service to use to work with DAO.
+	 *            Service to use to work with lot.
 	 */
-	public LotPage(LotService service) {
+	public ViewLot(LotService service) {
 		this.service = service;
 	}
 
@@ -46,36 +45,37 @@ public class LotPage implements Command {
 	 * @throws CommandException 
 	 */
 	@Override
-	public PageList execute(SessionRequestContent requestContent) throws CommandException {
-		LOG.log(Level.DEBUG, "Perform " + CommandType.LOT_PAGE.name());
-
-		Long lotId;
+	public ViewPage execute(SessionRequestContent requestContent){
+		LOG.log(Level.DEBUG, "Perform " + CommandType.VIEW_LOT.name());
+		Optional<Long> lotIdOptional = Optional.empty();
+		
 		try {
-			Parser parser = new Parser();
-			lotId = parser.parseId(requestContent.getRequestParameter(ParsingValues.LOT_ID)[0]);
+			lotIdOptional = Optional.of(new InputParser().parseId(requestContent.getRequestParameter(ParsingValues.LOT_ID)[0]));
+			LOG.log(Level.TRACE, "Provided lot id is:" + lotIdOptional.get());
 		} catch (WrongInputException e) {
 			requestContent.insertRequestAttribute(ParsingValues.ERROR_MESSAGE, "Wrong lot id.");
-			throw new CommandException(e);
 		}
 		
-		Optional<Lot> lot = Optional.empty();
-		try {
-			lot = new LotService().findLotById(lotId);
-		} catch (ServiceException e) {
-			LOG.log(Level.ERROR, "Show lot service error");
-			requestContent.insertRequestAttribute(ParsingValues.ERROR_MESSAGE, "Service error. Try again later.");
+		Optional<Lot> lotOptional = Optional.empty();
+		if(lotIdOptional.isPresent()) {
+			try {
+				lotOptional = new LotService().findLotById(lotIdOptional.get());
+			} catch (ServiceException e) {
+				LOG.log(Level.ERROR, "Lot service error.");
+				requestContent.insertRequestAttribute(ParsingValues.ERROR_MESSAGE, "Service error. Try again later.");
+			}
 		}
-		
-		if (lot.isPresent()) {
-			requestContent.insertRequestAttribute(ParsingValues.LOT, lot.get());
+			
+		if (lotOptional.isPresent()) {
+			requestContent.insertRequestAttribute(ParsingValues.LOT, lotOptional.get());
 		} else {
 			LOG.log(Level.ERROR, "No lot matching id found");
             requestContent.insertRequestAttribute(ParsingValues.ERROR_MESSAGE, "Wrong lot id provided.");
 		}
 
-		PageList page = PageList.NULL_PAGE;
-		if(lot.isPresent()) {
-			page = PageList.LOT_PAGE;
+		ViewPage page = ViewPage.NULL_PAGE;
+		if(lotOptional.isPresent()) {
+			page = ViewPage.VIEW_LOT;
 		} else {
 			page = CommandType.EMPTY_COMMAND.getCommand().execute(requestContent);
 		}

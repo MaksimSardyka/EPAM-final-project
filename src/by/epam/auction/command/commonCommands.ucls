@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="2" language="java" name="by.epam.auction.command.LoginCommand" project="Au1" 
-    file="/Au1/src/by/epam/auction/command/LoginCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="by.epam.auction.command.user.LoginCommand" project="Au1" 
+    file="/Au1/src/by/epam/auction/command/user/LoginCommand.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="192" y="501"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="by.epam.auction.command.LogoutCommand" project="Au1" 
-    file="/Au1/src/by/epam/auction/command/LogoutCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="by.epam.auction.command.user.LogoutCommand" project="Au1" 
+    file="/Au1/src/by/epam/auction/command/user/LogoutCommand.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="495" y="507"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -47,25 +47,29 @@
     </display>  
   </enumeration>  
   <realization id="6">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <realization id="7">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="1"/>  
   </realization>  
-  <association id="7">    
+  <realization id="8">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <association id="9">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="8" name="command"/>      
-      <multiplicity id="9" minimum="0" maximum="1"/>    
+      <attribute id="10" name="command">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="11" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="10">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <realization id="11">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

@@ -2,13 +2,15 @@ package by.epam.auction.command;
 
 import by.epam.auction.command.administrator.BlockUserCommand;
 import by.epam.auction.command.administrator.ShowUserSetCommand;
+import by.epam.auction.command.lot.BidCommand;
+import by.epam.auction.command.lot.ProposeLotCommand;
 import by.epam.auction.command.administrator.CreateAuctionCommand;
-import by.epam.auction.command.page.LotPage;
-import by.epam.auction.command.page.LotSetPage;
-import by.epam.auction.command.user.BidCommand;
-import by.epam.auction.command.user.ProposeLotCommand;
+import by.epam.auction.command.page.ViewLot;
+import by.epam.auction.command.page.ViewLotSet;
+import by.epam.auction.command.user.LoginCommand;
+import by.epam.auction.command.user.LogoutCommand;
 import by.epam.auction.command.user.RegisterCommand;
-import by.epam.auction.command.page.AuctionSetPage;
+import by.epam.auction.command.page.ViewAuctionSet;
 import by.epam.auction.service.AdministratorService;
 import by.epam.auction.service.AuctionService;
 import by.epam.auction.service.LotService;
@@ -27,11 +29,12 @@ public enum CommandType {
     
     CREATE_AUCTION(new CreateAuctionCommand(new AuctionService())),
     BlOCK_USER(new BlockUserCommand(new AdministratorService())),
-    USER_SET_PAGE(new ShowUserSetCommand(new AdministratorService())),
+    //TODO unblock user
+    VIEW_USER_SET(new ShowUserSetCommand(new AdministratorService())),
     
-    AUCTION_SET_PAGE(new AuctionSetPage(new AuctionService())),
-    LOT_SET_PAGE(new LotSetPage(new LotService())),
-    LOT_PAGE(new LotPage(new LotService())),
+    VIEW_AUCTION_SET(new ViewAuctionSet(new AuctionService())),
+    VIEW_LOT_SET(new ViewLotSet(new LotService())),
+    VIEW_LOT(new ViewLot(new LotService())),
 	
     EMPTY_COMMAND(new EmptyCommand());
 

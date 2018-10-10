@@ -1,4 +1,4 @@
-package by.epam.auction.command;
+package by.epam.auction.command.user;
 
 import java.util.Optional;
 
@@ -6,15 +6,16 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import by.epam.auction.command.exception.CommandException;
-import by.epam.auction.command.page.PageList;
+import by.epam.auction.command.Command;
+import by.epam.auction.command.CommandType;
+import by.epam.auction.command.page.ViewPage;
 import by.epam.auction.constant.ParsingValues;
 import by.epam.auction.content.SessionRequestContent;
 import by.epam.auction.domain.Role;
 import by.epam.auction.domain.User;
 import by.epam.auction.service.UserService;
 import by.epam.auction.service.exception.ServiceException;
-import by.epam.auction.validator.Parser;
+import by.epam.auction.validator.InputParser;
 import by.epam.auction.validator.exception.WrongInputException;
 
 /**
@@ -27,7 +28,7 @@ public class LoginCommand implements Command {
     private static final Logger LOG = LogManager.getLogger();
 
     /**
-     * Service to work with DAO.
+     * Service to work with user.
      */
     UserService service;
 
@@ -35,7 +36,7 @@ public class LoginCommand implements Command {
      * Constructor.
      *
      * @param receiver
-     *            Service to use to work with DAO.
+     *            Service to use to work with user.
      */
     public LoginCommand(UserService service) {
         this.service = service;
@@ -46,26 +47,27 @@ public class LoginCommand implements Command {
      * @throws WrongInputException 
      */
     @Override
-    public PageList execute(SessionRequestContent requestContent) throws CommandException {
+    public ViewPage execute(SessionRequestContent requestContent){
         LOG.log(Level.DEBUG, "Perform " + CommandType.LOG_IN.name());
 
-    	String login = null;
-    	String password = null; 
+    	Optional<String> login = Optional.empty();
+    	Optional<String> password = Optional.empty(); 
         try {
-            Parser parser = new Parser();
-        	login = parser.parseLogin(requestContent.getRequestParameter(ParsingValues.USERNAME)[0]);
-        	password = parser.parsePassword(requestContent.getRequestParameter(ParsingValues.PASSWORD)[0]);
+            InputParser parser = new InputParser();
+        	login = Optional.of(parser.parseLogin(requestContent.getRequestParameter(ParsingValues.USERNAME)[0]));
+        	password = Optional.of(parser.parsePassword(requestContent.getRequestParameter(ParsingValues.PASSWORD)[0]));
         } catch (WrongInputException e) {
         	requestContent.insertRequestAttribute(ParsingValues.ERROR_MESSAGE, "Wrong login or password.");
-        	throw new CommandException(e);
         }
         
         Optional<User> optionalUser = Optional.empty();
-        try {
-            optionalUser = service.findUserByLoginPassword(login, password);
-        } catch (ServiceException e) {
-            LOG.log(Level.ERROR, "Login service error");
-            requestContent.insertRequestAttribute(ParsingValues.ERROR_MESSAGE, "Unable to login you at the moment. Try again later.");
+        if(login.isPresent() && password.isPresent()) {
+        	try {
+        		optionalUser = service.findUserByLoginPassword(login.get(), password.get());
+        	} catch (ServiceException e) {
+        		LOG.log(Level.ERROR, "Login service error");
+        		requestContent.insertRequestAttribute(ParsingValues.ERROR_MESSAGE, "Login service error. Try again later.");
+        	}
         }
         
         if(optionalUser.isPresent()) {
@@ -75,15 +77,15 @@ public class LoginCommand implements Command {
         	requestContent.insertRequestAttribute(ParsingValues.ERROR_MESSAGE, "Wrong login or password.");
         }
         
-        PageList page = PageList.NULL_PAGE;
+        ViewPage page = ViewPage.NULL_PAGE;
         if (optionalUser.isPresent()) {
         	User user = optionalUser.get();
             if (user.getRole() == Role.USER) {
                 LOG.log(Level.DEBUG, "User " + user.getLogin() +" loged-in");
-                page = CommandType.AUCTION_SET_PAGE.getCommand().execute(requestContent);
+                page = CommandType.VIEW_AUCTION_SET.getCommand().execute(requestContent);
             } else if (user.getRole() == Role.ADMINISTRATOR) {
                 LOG.log(Level.DEBUG, "Administrator loged-in");
-                page = PageList.ADMIN_PAGE;//TODO Replace with command later?
+                page = ViewPage.ADMIN_PAGE;//TODO Replace with command later?
             }
         } else {
         	page = CommandType.EMPTY_COMMAND.getCommand().execute(requestContent);

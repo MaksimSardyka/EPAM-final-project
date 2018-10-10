@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 import by.epam.auction.domain.AuctionType;
 import by.epam.auction.validator.exception.WrongInputException;
 
-public class Parser {
+public class InputParser {
 	/**
 	 * Logger for this class.
 	 */

@@ -1,5 +1,6 @@
 package by.epam.auction.command.administrator;
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -7,14 +8,13 @@ import org.apache.logging.log4j.Logger;
 
 import by.epam.auction.command.Command;
 import by.epam.auction.command.CommandType;
-import by.epam.auction.command.exception.CommandException;
-import by.epam.auction.command.page.PageList;
+import by.epam.auction.command.page.ViewPage;
 import by.epam.auction.constant.ParsingValues;
 import by.epam.auction.content.SessionRequestContent;
 import by.epam.auction.domain.AuctionType;
 import by.epam.auction.service.AuctionService;
 import by.epam.auction.service.exception.ServiceException;
-import by.epam.auction.validator.Parser;
+import by.epam.auction.validator.InputParser;
 import by.epam.auction.validator.exception.WrongInputException;
 
 public class CreateAuctionCommand implements Command{
@@ -32,42 +32,43 @@ public class CreateAuctionCommand implements Command{
 	}
 
 	@Override
-	public PageList execute(SessionRequestContent requestContent) throws CommandException {
+	public ViewPage execute(SessionRequestContent requestContent) {
         LOG.log(Level.DEBUG, "Perform " + CommandType.CREATE_AUCTION.name());
-        PageList page = PageList.NULL_PAGE;
+        ViewPage page = ViewPage.NULL_PAGE;
         
-        LocalDateTime startTime = null;
-        LocalDateTime finishTime = null;
-        String description = null;
-        AuctionType type = null;
-        Parser parser = new Parser();
+        Optional<LocalDateTime> startTime = Optional.empty();
+        Optional<LocalDateTime> finishTime = Optional.empty();
+        Optional<String> description = Optional.empty();
+        Optional<AuctionType> type = Optional.empty();
         try {
-        	startTime  = parser.parseDatetime(requestContent.getRequestParameter(ParsingValues.START_TIME)[0]);
-        	finishTime  = parser.parseDatetime(requestContent.getRequestParameter(ParsingValues.FINISH_TIME)[0]);
-        	description = parser.parseString(requestContent.getRequestParameter(ParsingValues.DESCRIPTION)[0], DESCRIPTION_MAX_LENGTH);
-        	type = parser.parseAuctionType(requestContent.getRequestParameter(ParsingValues.AUCTION_TYPE)[0]);
-        	if(!finishTime.isAfter(startTime)) {
-        		throw new WrongInputException(startTime + " isn't after " + finishTime);
-        	}
+            InputParser parser = new InputParser();
+        	startTime  = Optional.of(parser.parseDatetime(requestContent.getRequestParameter(ParsingValues.START_TIME)[0]));
+        	finishTime  = Optional.of(parser.parseDatetime(requestContent.getRequestParameter(ParsingValues.FINISH_TIME)[0]));
+        	description = Optional.of(parser.parseString(requestContent.getRequestParameter(ParsingValues.DESCRIPTION)[0], DESCRIPTION_MAX_LENGTH));
+        	type = Optional.of(parser.parseAuctionType(requestContent.getRequestParameter(ParsingValues.AUCTION_TYPE)[0]));
         } catch (WrongInputException e) {
     		requestContent.insertRequestAttribute(ParsingValues.ERROR_MESSAGE, "Wrong auction data provided.");
-        	throw new CommandException(e);
         }
         
-        boolean lotCreated = false;
-        try{
-        	lotCreated = service.createAuction(startTime, finishTime, description, type); 
-        } catch (ServiceException e) {
-            LOG.log(Level.ERROR, "Create auction service error");
-            requestContent.insertRequestAttribute(ParsingValues.ERROR_MESSAGE, "Unable to create auction.");
+        boolean isAuctionCreated = false; 
+        if(startTime.isPresent() 
+        		&& finishTime.isPresent()
+        		&& !startTime.get().isBefore(finishTime.get())
+        		&& description.isPresent()
+        		&& type.isPresent()) {
+        	try{
+        		isAuctionCreated = service.createAuction(startTime.get(), finishTime.get(), description.get(), type.get()); 
+        	} catch (ServiceException e) {
+        		LOG.log(Level.ERROR, "Auction service error");
+        		requestContent.insertRequestAttribute(ParsingValues.ERROR_MESSAGE, "Unable to create auction.");
+        	}
         }
         
-        if(lotCreated) {
-        	page = CommandType.AUCTION_SET_PAGE.getCommand().execute(requestContent);
+        if(isAuctionCreated) {
+        	page = CommandType.VIEW_AUCTION_SET.getCommand().execute(requestContent);
         } else {
             page = CommandType.EMPTY_COMMAND.getCommand().execute(requestContent);
         }
 		return page;
 	}
-
 }
