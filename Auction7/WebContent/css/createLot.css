@@ -1,0 +1,20 @@
+html { height: 100%; }
+body { height: 100%; display: flex; }
+body > #viewport { flex: 1; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;font-weight: light;
+    font-weight: 100;
+}
+
+.d-flex {
+	width: 500px;
+    border-radius: 8px 8px 0 0;
+    padding-top: 24px;
+}
+
+.content_wrapper{
+	align-content: center;
+}
