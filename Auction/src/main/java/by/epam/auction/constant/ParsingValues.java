@@ -13,7 +13,7 @@ public final class ParsingValues {
 	
     /** The Constant LOT_NAME. */
     public static final String LOT_NAME = "lot_name";
-    
+   
     /** The Constant LOT_NAME_MAX_LENGTH. */
     public static final int LOT_NAME_MAX_LENGTH = 40;
 

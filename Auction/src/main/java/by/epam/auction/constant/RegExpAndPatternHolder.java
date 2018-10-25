@@ -36,4 +36,7 @@ public final class RegExpAndPatternHolder {
 	/** The Constant SCRIPT. */
 	public static final String SCRIPT = "script";
 	
+	public static final String ENCODING = "encoding";
+	
+	public static final String INDEX_PATH = "INDEX_PATH";
 }

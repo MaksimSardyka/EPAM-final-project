@@ -2,7 +2,7 @@
 <!DOCTYPE xml>
 <Configuration>
 	<Appenders>
-		<File name="FILE" fileName="logs/21.log" append="false">
+		<File name="FILE" fileName="logs/auction.log" append="false">
 			<PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
 		</File>
 		<Console name="STDOUT" target="SYSTEM_OUT">

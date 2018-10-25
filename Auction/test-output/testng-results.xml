@@ -1,0 +1,1594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="56" passed="56">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="304" started-at="2018-10-25T22:59:33Z" finished-at="2018-10-25T22:59:33Z">
+    <groups>
+      <group name="functests">
+        <method signature="AmountParserTest.isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToFilterOffIncorrectValues" class="test.by.epam.auction.parser.AmountParserTest"/>
+        <method signature="AuctionTypeParserTest.isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToFilterOffIncorrectValues" class="test.by.epam.auction.parser.AuctionTypeParserTest"/>
+        <method signature="IdParserTest.isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToFilterOffIncorrectValues" class="test.by.epam.auction.parser.IdParserTest"/>
+        <method signature="PageNumberParserTest.isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToFilterOffIncorrectValues" class="test.by.epam.auction.parser.PageNumberParserTest"/>
+      </group> <!-- functests -->
+      <group name="checkintest">
+        <method signature="ValidatorTest.validateTwoPasswordsMatchEachOther(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="validateTwoPasswordsMatchEachOther" class="test.by.epam.auction.validator.ValidatorTest"/>
+        <method signature="ValidatorTest.validateTwoPasswordsWontMatchEachOther(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="validateTwoPasswordsWontMatchEachOther" class="test.by.epam.auction.validator.ValidatorTest"/>
+      </group> <!-- checkintest -->
+      <group name="functest">
+        <method signature="ValidatorTest.shouldReturnFalseIfNullPasswordProvided(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="shouldReturnFalseIfNullPasswordProvided" class="test.by.epam.auction.validator.ValidatorTest"/>
+      </group> <!-- functest -->
+      <group name="checkins">
+        <method signature="AmountParserTest.isAbleToParseCorrectAmount(java.lang.String, java.math.BigDecimal)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToParseCorrectAmount" class="test.by.epam.auction.parser.AmountParserTest"/>
+        <method signature="AuctionTypeParserTest.isAbleToParseCorrectAuctionType(java.lang.String, by.epam.auction.domain.AuctionType)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToParseCorrectAuctionType" class="test.by.epam.auction.parser.AuctionTypeParserTest"/>
+        <method signature="IdParserTest.isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToParseCorrectAmount" class="test.by.epam.auction.parser.IdParserTest"/>
+        <method signature="PageNumberParserTest.isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToParseCorrectAmount" class="test.by.epam.auction.parser.PageNumberParserTest"/>
+      </group> <!-- checkins -->
+    </groups>
+    <test name="Default test" duration-ms="304" started-at="2018-10-25T22:59:33Z" finished-at="2018-10-25T22:59:33Z">
+      <class name="test.by.epam.auction.validator.ValidatorTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="init" is-config="true" duration-ms="1" started-at="2018-10-25T22:59:33Z" finished-at="2018-10-25T22:59:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="shouldReturnFalseIfNullPasswordProvided(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="shouldReturnFalseIfNullPasswordProvided" duration-ms="18" started-at="2018-10-25T22:59:33Z" data-provider="nullPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseIfNullPasswordProvided -->
+        <test-method status="PASS" signature="shouldReturnFalseIfNullPasswordProvided(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="shouldReturnFalseIfNullPasswordProvided" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="nullPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[s]]>
+              </value>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseIfNullPasswordProvided -->
+        <test-method status="PASS" signature="shouldReturnFalseIfNullPasswordProvided(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="shouldReturnFalseIfNullPasswordProvided" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="nullPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[s]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseIfNullPasswordProvided -->
+        <test-method status="PASS" signature="shouldReturnFalseIfNullPasswordProvided(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="shouldReturnFalseIfNullPasswordProvided" duration-ms="6" started-at="2018-10-25T22:59:33Z" data-provider="nullPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseIfNullPasswordProvided -->
+        <test-method status="PASS" signature="shouldReturnFalseIfNullPasswordProvided(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="shouldReturnFalseIfNullPasswordProvided" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="nullPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFalseIfNullPasswordProvided -->
+        <test-method status="PASS" signature="validateTwoPasswordsMatchEachOther(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="validateTwoPasswordsMatchEachOther" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="equalPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[s]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[s]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTwoPasswordsMatchEachOther -->
+        <test-method status="PASS" signature="validateTwoPasswordsMatchEachOther(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="validateTwoPasswordsMatchEachOther" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="equalPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[some]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[some]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTwoPasswordsMatchEachOther -->
+        <test-method status="PASS" signature="validateTwoPasswordsMatchEachOther(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="validateTwoPasswordsMatchEachOther" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="equalPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Some]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Some]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTwoPasswordsMatchEachOther -->
+        <test-method status="PASS" signature="validateTwoPasswordsWontMatchEachOther(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="validateTwoPasswordsWontMatchEachOther" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="unequalPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[some]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTwoPasswordsWontMatchEachOther -->
+        <test-method status="PASS" signature="validateTwoPasswordsWontMatchEachOther(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="validateTwoPasswordsWontMatchEachOther" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="unequalPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[some]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTwoPasswordsWontMatchEachOther -->
+        <test-method status="PASS" signature="validateTwoPasswordsWontMatchEachOther(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="validateTwoPasswordsWontMatchEachOther" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="unequalPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[s]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTwoPasswordsWontMatchEachOther -->
+        <test-method status="PASS" signature="validateTwoPasswordsWontMatchEachOther(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="validateTwoPasswordsWontMatchEachOther" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="unequalPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Some]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTwoPasswordsWontMatchEachOther -->
+        <test-method status="PASS" signature="validateTwoPasswordsWontMatchEachOther(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="validateTwoPasswordsWontMatchEachOther" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="unequalPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[s]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[S]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTwoPasswordsWontMatchEachOther -->
+        <test-method status="PASS" signature="validateTwoPasswordsWontMatchEachOther(java.lang.String, java.lang.String)[pri:0, instance:test.by.epam.auction.validator.ValidatorTest@42e26948]" name="validateTwoPasswordsWontMatchEachOther" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="unequalPasswords" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[some]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[another]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTwoPasswordsWontMatchEachOther -->
+      </class> <!-- test.by.epam.auction.validator.ValidatorTest -->
+      <class name="test.by.epam.auction.parser.IdParserTest">
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToFilterOffIncorrectValues" duration-ms="66" started-at="2018-10-25T22:59:33Z" data-provider="incorrectId" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid id provided:-1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid id provided:-1
+at by.epam.auction.validator.parser.IdParser.lambda$parse$0(IdParser.java:40)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.IdParser.parse(IdParser.java:40)
+at test.by.epam.auction.parser.IdParserTest.isAbleToFilterOffIncorrectValues(IdParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToFilterOffIncorrectValues" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="incorrectId" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid id provided:0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid id provided:0
+at by.epam.auction.validator.parser.IdParser.lambda$parse$0(IdParser.java:40)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.IdParser.parse(IdParser.java:40)
+at test.by.epam.auction.parser.IdParserTest.isAbleToFilterOffIncorrectValues(IdParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToFilterOffIncorrectValues" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="incorrectId" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid id provided:]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid id provided:
+at by.epam.auction.validator.parser.IdParser.lambda$parse$0(IdParser.java:40)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.IdParser.parse(IdParser.java:40)
+at test.by.epam.auction.parser.IdParserTest.isAbleToFilterOffIncorrectValues(IdParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToFilterOffIncorrectValues" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="incorrectId" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[    ]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid id provided:    ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid id provided:    
+at by.epam.auction.validator.parser.IdParser.lambda$parse$0(IdParser.java:40)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.IdParser.parse(IdParser.java:40)
+at test.by.epam.auction.parser.IdParserTest.isAbleToFilterOffIncorrectValues(IdParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToFilterOffIncorrectValues" duration-ms="4" started-at="2018-10-25T22:59:33Z" data-provider="incorrectId" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[string value]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid id provided:string value]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid id provided:string value
+at by.epam.auction.validator.parser.IdParser.lambda$parse$0(IdParser.java:40)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.IdParser.parse(IdParser.java:40)
+at test.by.epam.auction.parser.IdParserTest.isAbleToFilterOffIncorrectValues(IdParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToFilterOffIncorrectValues" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="incorrectId" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid id provided:null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid id provided:null
+at by.epam.auction.validator.parser.IdParser.lambda$parse$0(IdParser.java:40)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.IdParser.parse(IdParser.java:40)
+at test.by.epam.auction.parser.IdParserTest.isAbleToFilterOffIncorrectValues(IdParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToParseCorrectAmount" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="correctId" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1223445566]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1223445566]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToParseCorrectAmount" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="correctId" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ 1223445566]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1223445566]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToParseCorrectAmount" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctId" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1223445566 ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1223445566]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToParseCorrectAmount" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctId" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ 1223445566 ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1223445566]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="isAbleToParseCorrectAmount" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="correctId" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+      </class> <!-- test.by.epam.auction.parser.IdParserTest -->
+      <class name="test.by.epam.auction.parser.AmountParserTest">
+        <test-method status="PASS" signature="initAmountParser()[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="initAmountParser" is-config="true" duration-ms="473" started-at="2018-10-25T22:59:33Z" finished-at="2018-10-25T22:59:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initAmountParser -->
+        <test-method status="PASS" signature="initAuctionTypeParser()[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="initAuctionTypeParser" is-config="true" duration-ms="1" started-at="2018-10-25T22:59:33Z" finished-at="2018-10-25T22:59:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initAuctionTypeParser -->
+        <test-method status="PASS" signature="initIdParser()[pri:0, instance:test.by.epam.auction.parser.IdParserTest@4883b407]" name="initIdParser" is-config="true" duration-ms="1" started-at="2018-10-25T22:59:33Z" finished-at="2018-10-25T22:59:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initIdParser -->
+        <test-method status="PASS" signature="initPageNumberParser()[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="initPageNumberParser" is-config="true" duration-ms="0" started-at="2018-10-25T22:59:33Z" finished-at="2018-10-25T22:59:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageNumberParser -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToFilterOffIncorrectValues" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="incorrectAmount" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-1.00]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid amount provided:-1.00]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid amount provided:-1.00
+at by.epam.auction.validator.parser.AmountParser.lambda$parse$0(AmountParser.java:44)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.AmountParser.parse(AmountParser.java:44)
+at test.by.epam.auction.parser.AmountParserTest.isAbleToFilterOffIncorrectValues(AmountParserTest.java:50)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToFilterOffIncorrectValues" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="incorrectAmount" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid amount provided:]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid amount provided:
+at by.epam.auction.validator.parser.AmountParser.lambda$parse$0(AmountParser.java:44)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.AmountParser.parse(AmountParser.java:44)
+at test.by.epam.auction.parser.AmountParserTest.isAbleToFilterOffIncorrectValues(AmountParserTest.java:50)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToFilterOffIncorrectValues" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="incorrectAmount" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[    ]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid amount provided:    ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid amount provided:    
+at by.epam.auction.validator.parser.AmountParser.lambda$parse$0(AmountParser.java:44)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.AmountParser.parse(AmountParser.java:44)
+at test.by.epam.auction.parser.AmountParserTest.isAbleToFilterOffIncorrectValues(AmountParserTest.java:50)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToFilterOffIncorrectValues" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="incorrectAmount" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[unmatching regEx]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid amount provided:unmatching regEx]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid amount provided:unmatching regEx
+at by.epam.auction.validator.parser.AmountParser.lambda$parse$0(AmountParser.java:44)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.AmountParser.parse(AmountParser.java:44)
+at test.by.epam.auction.parser.AmountParserTest.isAbleToFilterOffIncorrectValues(AmountParserTest.java:50)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToFilterOffIncorrectValues" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="incorrectAmount" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid amount provided:null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid amount provided:null
+at by.epam.auction.validator.parser.AmountParser.lambda$parse$0(AmountParser.java:44)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.AmountParser.parse(AmountParser.java:44)
+at test.by.epam.auction.parser.AmountParserTest.isAbleToFilterOffIncorrectValues(AmountParserTest.java:50)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.math.BigDecimal)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToParseCorrectAmount" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="correctAmount" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3.14 ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3.14]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.math.BigDecimal)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToParseCorrectAmount" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="correctAmount" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ 3.14]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3.14]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.math.BigDecimal)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToParseCorrectAmount" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctAmount" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ 3.14 ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3.14]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.math.BigDecimal)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToParseCorrectAmount" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctAmount" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0.00]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.00]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.math.BigDecimal)[pri:0, instance:test.by.epam.auction.parser.AmountParserTest@7d9d1a19]" name="isAbleToParseCorrectAmount" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctAmount" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1.00]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1.00]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+      </class> <!-- test.by.epam.auction.parser.AmountParserTest -->
+      <class name="test.by.epam.auction.parser.PageNumberParserTest">
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToFilterOffIncorrectValues" duration-ms="7" started-at="2018-10-25T22:59:33Z" data-provider="incorrectPageNumberParser" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid page number provided:-1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid page number provided:-1
+at by.epam.auction.validator.parser.PageNumberParser.lambda$parse$3(PageNumberParser.java:42)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.PageNumberParser.parse(PageNumberParser.java:42)
+at test.by.epam.auction.parser.PageNumberParserTest.isAbleToFilterOffIncorrectValues(PageNumberParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToFilterOffIncorrectValues" duration-ms="4" started-at="2018-10-25T22:59:33Z" data-provider="incorrectPageNumberParser" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid page number provided:]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid page number provided:
+at by.epam.auction.validator.parser.PageNumberParser.lambda$parse$3(PageNumberParser.java:42)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.PageNumberParser.parse(PageNumberParser.java:42)
+at test.by.epam.auction.parser.PageNumberParserTest.isAbleToFilterOffIncorrectValues(PageNumberParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToFilterOffIncorrectValues" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="incorrectPageNumberParser" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[    ]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid page number provided:    ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid page number provided:    
+at by.epam.auction.validator.parser.PageNumberParser.lambda$parse$3(PageNumberParser.java:42)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.PageNumberParser.parse(PageNumberParser.java:42)
+at test.by.epam.auction.parser.PageNumberParserTest.isAbleToFilterOffIncorrectValues(PageNumberParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToFilterOffIncorrectValues" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="incorrectPageNumberParser" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[string value]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid page number provided:string value]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid page number provided:string value
+at by.epam.auction.validator.parser.PageNumberParser.lambda$parse$3(PageNumberParser.java:42)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.PageNumberParser.parse(PageNumberParser.java:42)
+at test.by.epam.auction.parser.PageNumberParserTest.isAbleToFilterOffIncorrectValues(PageNumberParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToFilterOffIncorrectValues" duration-ms="3" started-at="2018-10-25T22:59:33Z" data-provider="incorrectPageNumberParser" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Null pageNumber provided]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Null pageNumber provided
+at by.epam.auction.validator.parser.PageNumberParser.parse(PageNumberParser.java:28)
+at test.by.epam.auction.parser.PageNumberParserTest.isAbleToFilterOffIncorrectValues(PageNumberParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToParseCorrectAmount" duration-ms="6" started-at="2018-10-25T22:59:33Z" data-provider="correctPageNumber" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1223445566]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1223445566]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToParseCorrectAmount" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="correctPageNumber" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ 1223445566]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1223445566]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToParseCorrectAmount" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctPageNumber" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1223445566 ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1223445566]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToParseCorrectAmount" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctPageNumber" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ 1223445566 ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1223445566]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToParseCorrectAmount" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctPageNumber" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAmount(java.lang.String, java.lang.Long)[pri:0, instance:test.by.epam.auction.parser.PageNumberParserTest@39c0f4a]" name="isAbleToParseCorrectAmount" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctPageNumber" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAmount -->
+      </class> <!-- test.by.epam.auction.parser.PageNumberParserTest -->
+      <class name="test.by.epam.auction.parser.AuctionTypeParserTest">
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToFilterOffIncorrectValues" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="incorrectAuctionType" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid auction type provided:]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid auction type provided:
+at by.epam.auction.validator.parser.AuctionTypeParser.lambda$parse$0(AuctionTypeParser.java:37)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.AuctionTypeParser.parse(AuctionTypeParser.java:37)
+at test.by.epam.auction.parser.AuctionTypeParserTest.isAbleToFilterOffIncorrectValues(AuctionTypeParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToFilterOffIncorrectValues" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="incorrectAuctionType" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[    ]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid auction type provided:    ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid auction type provided:    
+at by.epam.auction.validator.parser.AuctionTypeParser.lambda$parse$0(AuctionTypeParser.java:37)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.AuctionTypeParser.parse(AuctionTypeParser.java:37)
+at test.by.epam.auction.parser.AuctionTypeParserTest.isAbleToFilterOffIncorrectValues(AuctionTypeParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToFilterOffIncorrectValues" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="incorrectAuctionType" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[unmatching regEx]]>
+              </value>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid auction type provided:unmatching regEx]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid auction type provided:unmatching regEx
+at by.epam.auction.validator.parser.AuctionTypeParser.lambda$parse$0(AuctionTypeParser.java:37)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.AuctionTypeParser.parse(AuctionTypeParser.java:37)
+at test.by.epam.auction.parser.AuctionTypeParserTest.isAbleToFilterOffIncorrectValues(AuctionTypeParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToFilterOffIncorrectValues(java.lang.String)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToFilterOffIncorrectValues" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="incorrectAuctionType" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="by.epam.auction.validator.exception.WrongInputException">
+            <message>
+              <![CDATA[Non-valid auction type provided:null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.auction.validator.exception.WrongInputException: Non-valid auction type provided:null
+at by.epam.auction.validator.parser.AuctionTypeParser.lambda$parse$0(AuctionTypeParser.java:37)
+at java.util.Optional.orElseThrow(Optional.java:290)
+at by.epam.auction.validator.parser.AuctionTypeParser.parse(AuctionTypeParser.java:37)
+at test.by.epam.auction.parser.AuctionTypeParserTest.isAbleToFilterOffIncorrectValues(AuctionTypeParserTest.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.auction.validator.exception.WrongInputException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToFilterOffIncorrectValues -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAuctionType(java.lang.String, by.epam.auction.domain.AuctionType)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToParseCorrectAuctionType" duration-ms="3" started-at="2018-10-25T22:59:33Z" data-provider="correctAuctionType" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[direct ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[DIRECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAuctionType -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAuctionType(java.lang.String, by.epam.auction.domain.AuctionType)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToParseCorrectAuctionType" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="correctAuctionType" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ direct]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[DIRECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAuctionType -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAuctionType(java.lang.String, by.epam.auction.domain.AuctionType)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToParseCorrectAuctionType" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctAuctionType" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ direct ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[DIRECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAuctionType -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAuctionType(java.lang.String, by.epam.auction.domain.AuctionType)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToParseCorrectAuctionType" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctAuctionType" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[reverse]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[REVERSE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAuctionType -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAuctionType(java.lang.String, by.epam.auction.domain.AuctionType)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToParseCorrectAuctionType" duration-ms="2" started-at="2018-10-25T22:59:33Z" data-provider="correctAuctionType" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ reverse]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[REVERSE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAuctionType -->
+        <test-method status="PASS" signature="isAbleToParseCorrectAuctionType(java.lang.String, by.epam.auction.domain.AuctionType)[pri:0, instance:test.by.epam.auction.parser.AuctionTypeParserTest@1794d431]" name="isAbleToParseCorrectAuctionType" duration-ms="1" started-at="2018-10-25T22:59:33Z" data-provider="correctAuctionType" finished-at="2018-10-25T22:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[reverse ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[REVERSE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAbleToParseCorrectAuctionType -->
+      </class> <!-- test.by.epam.auction.parser.AuctionTypeParserTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

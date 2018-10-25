@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="test.by.epam.auction.parser.PageNumberParserTest"/>
+      <class name="test.by.epam.auction.parser.AuctionTypeParserTest"/>
+      <class name="test.by.epam.auction.parser.IdParserTest"/>
+      <class name="test.by.epam.auction.validator.ValidatorTest"/>
+      <class name="test.by.epam.auction.parser.AmountParserTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
