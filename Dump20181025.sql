@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `auction` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `auction`;
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: localhost    Database: auction
@@ -15,8 +17,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-DROP DATABASE IF EXISTS `auction`;
-CREATE SCHEMA `auction`;
 --
 -- Table structure for table `auction`
 --
@@ -31,7 +31,7 @@ CREATE TABLE `auction` (
   `description` varchar(200) COLLATE utf8_bin NOT NULL COMMENT 'Описание аукциона.',
   `type` tinyint(1) NOT NULL COMMENT 'Тип аукциона:\n0 - прямой\n1 - обратный',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Аукционы, проводимые в определенное время и включающие определенные лоты.';
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Аукционы, проводимые в определенное время и включающие определенные лоты.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `auction` (
 
 LOCK TABLES `auction` WRITE;
 /*!40000 ALTER TABLE `auction` DISABLE KEYS */;
-INSERT INTO `auction` VALUES (1,'2018-07-26 12:00:00','2018-10-26 16:00:00','Truck cars.',0),(2,'2018-07-27 11:00:00','2018-10-27 14:00:00','French art.',0),(3,'2018-07-29 13:00:00','2018-10-29 18:00:00','Ancient weapon.',0),(4,'2018-07-30 11:00:00','2018-10-30 17:00:00','Belgian art.',0),(5,'2018-08-01 14:00:00','2018-10-01 19:00:00','Chineese art.',0),(6,'2018-08-02 12:00:00','2018-10-02 21:00:00','Old chineese weapon.',0),(7,'2018-08-06 13:00:00','2018-10-06 18:00:00','Coupe cars.',0),(8,'2018-08-08 15:00:00','2018-10-08 17:00:00','Convertible cars.',0),(9,'2018-08-11 14:00:00','2018-10-11 18:00:00','Sedan cars.',0),(10,'2018-08-16 13:00:00','2018-10-16 19:00:00','Italian wines.',0),(11,'2018-08-20 11:00:00','2018-10-20 16:00:00','Ancient indian weapon.',0),(12,'2018-08-21 12:00:00','2018-10-21 18:00:00','Old turkish weapon.',0),(13,'2018-08-24 13:00:00','2018-10-24 17:00:00','Coins.',0),(14,'2018-08-26 14:00:00','2018-10-26 19:00:00','Wheat options contract.',1),(15,'2018-10-10 16:30:00','2018-12-10 16:20:00','some',0),(16,'2018-10-23 01:01:00','2018-10-25 01:01:00','Description',0),(17,'2018-10-23 01:01:00','2018-10-25 01:01:00','Description',0),(18,'2018-10-23 01:01:00','2018-10-25 01:01:00','Description',0),(19,'2018-10-23 01:01:00','2018-10-25 01:01:00','Description',0),(20,'2018-10-23 01:01:00','2018-10-25 01:01:00','Description',0),(21,'2018-10-23 01:01:00','2018-10-25 01:01:00','Description',0),(22,'2018-10-23 01:01:00','2018-10-25 01:01:00','Description',0),(23,'2018-10-23 01:01:00','2018-10-25 01:01:00','Description',0),(24,'2018-10-23 01:01:00','2018-10-25 01:01:00','Description',0),(25,'2018-10-23 01:01:00','2018-10-25 01:01:00','Description',0);
+INSERT INTO `auction` VALUES (1,'2018-07-26 12:00:00','2018-10-26 16:00:00','Truck cars.',0),(2,'2018-07-27 11:00:00','2018-10-27 14:00:00','French art.',0),(3,'2018-07-29 13:00:00','2018-10-29 18:00:00','Ancient weapon.',0),(4,'2018-07-30 11:00:00','2018-10-30 17:00:00','Belgian art.',0),(5,'2018-08-01 14:00:00','2018-10-01 19:00:00','Chineese art.',0),(6,'2018-08-02 12:00:00','2018-10-02 21:00:00','Old chineese weapon.',0),(7,'2018-08-06 13:00:00','2018-10-06 18:00:00','Coupe cars.',0),(8,'2018-08-08 15:00:00','2018-10-08 17:00:00','Convertible cars.',0),(9,'2018-08-11 14:00:00','2018-10-11 18:00:00','Sedan cars.',0),(26,'2018-10-26 11:11:00','2018-10-31 11:11:00','desghadjhdjsgahdjdfjshaklfd',0),(27,'2018-10-26 11:11:00','2018-10-31 12:43:00','Something',0);
 /*!40000 ALTER TABLE `auction` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +61,7 @@ CREATE TABLE `bid` (
   KEY `fk_bid_lot1_idx` (`lot_id`),
   CONSTRAINT `fk_bid_lot1` FOREIGN KEY (`lot_id`) REFERENCES `lot` (`id`),
   CONSTRAINT `fk_bid_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=93 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Ставки пользователей на лоты.';
+) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Ставки пользователей на лоты.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +70,7 @@ CREATE TABLE `bid` (
 
 LOCK TABLES `bid` WRITE;
 /*!40000 ALTER TABLE `bid` DISABLE KEYS */;
-INSERT INTO `bid` VALUES (1,8000.00,4,4),(2,8000.00,4,5),(3,8500.00,10,10),(4,9000.00,19,10),(5,9500.00,19,5),(6,2000.00,1,1),(7,2100.00,3,3),(8,2000.00,2,3),(9,1800.00,2,7),(10,3000.00,6,1),(11,3800.00,9,1),(12,2200.00,20,3),(13,2400.00,14,3),(14,1600.00,16,8),(15,1700.00,20,8),(16,1200.00,7,18),(17,1000.00,7,19),(18,1900.00,20,19),(19,10000.00,16,6),(20,6000.00,12,11),(21,6000.00,12,12),(22,6500.00,19,11),(23,7000.00,20,11),(24,1500.00,18,16),(25,2000.00,9,16),(26,8000.00,11,17),(27,5000.00,8,13),(28,7000.00,8,14),(29,8000.00,20,13),(30,3400.00,15,20),(31,1700.00,13,21),(32,1900.00,20,21),(33,100.00,17,9),(34,120.00,7,15),(35,4000.00,5,22),(36,123.23,39,21),(37,123.23,39,22),(38,123.23,39,22),(39,123.12,39,21),(40,123.26,39,4),(41,1.20,39,4),(42,9400.00,39,5),(43,9600.00,39,5),(44,9800.00,39,5),(45,2800.00,39,3),(46,12000.00,39,6),(47,12000.06,39,6),(48,9200.00,39,10),(49,7200.00,39,14),(50,1800.00,39,8),(51,1900.00,39,8),(52,7080.00,39,11),(53,2000.00,39,8),(54,4200.00,39,22),(55,1000.00,39,22),(56,4100.00,39,22),(57,11000.00,39,5),(58,3500.00,39,20),(59,3800.00,39,20),(60,7000.00,39,12),(61,8000.91,39,12),(62,8100.91,39,12),(63,7300.00,39,14),(64,7800.00,39,14),(65,125.00,39,15),(66,1900.00,39,7),(67,8200.00,39,4),(68,2100.00,39,8),(69,7900.00,39,14),(70,2000.00,39,21),(71,2100.00,39,21),(72,8200.00,39,13),(73,123.00,39,22),(74,8300.00,39,4),(75,8300.00,39,13),(76,2200.00,39,8),(77,8200.00,39,17),(78,9000.00,39,14),(79,10000.00,39,14),(80,8200.01,39,17),(81,2200.01,39,8),(82,126.00,39,15),(83,8300.04,39,4),(84,2200.00,48,21),(85,2200.02,48,21),(86,127.00,60,15),(87,2200.03,39,21),(88,11100.00,39,5),(89,2200.04,39,21),(90,11140.00,85,5),(91,2200.05,86,21),(92,3801.00,86,20);
+INSERT INTO `bid` VALUES (1,8000.00,4,4),(2,8000.00,4,5),(3,8500.00,10,10),(4,9000.00,19,10),(5,9500.00,19,5),(6,2000.00,1,1),(7,2100.00,3,3),(8,2000.00,2,3),(9,1800.00,2,7),(11,3800.00,9,1),(12,2200.00,20,3),(13,2400.00,14,3),(14,1600.00,16,8),(15,1700.00,20,8),(16,1200.00,7,18),(17,1000.00,7,19),(18,1900.00,20,19),(19,10000.00,16,6),(20,6000.00,12,11),(21,6000.00,12,12),(22,6500.00,19,11),(23,7000.00,20,11),(24,1500.00,18,16),(25,2000.00,9,16),(26,8000.00,11,17),(27,5000.00,8,13),(28,7000.00,8,14),(29,8000.00,20,13),(30,3400.00,15,20),(31,1700.00,13,21),(32,1900.00,20,21),(33,100.00,17,9),(34,120.00,7,15),(35,4000.00,5,22),(36,123.23,39,21),(37,123.23,39,22),(38,123.23,39,22),(39,123.12,39,21),(40,123.26,39,4),(41,1.20,39,4),(42,9400.00,39,5),(43,9600.00,39,5),(44,9800.00,39,5),(45,2800.00,39,3),(46,12000.00,39,6),(47,12000.06,39,6),(48,9200.00,39,10),(49,7200.00,39,14),(50,1800.00,39,8),(51,1900.00,39,8),(52,7080.00,39,11),(53,2000.00,39,8),(54,4200.00,39,22),(55,1000.00,39,22),(56,4100.00,39,22),(57,11000.00,39,5),(58,3500.00,39,20),(59,3800.00,39,20),(60,7000.00,39,12),(61,8000.91,39,12),(62,8100.91,39,12),(63,7300.00,39,14),(64,7800.00,39,14),(65,125.00,39,15),(66,1900.00,39,7),(67,8200.00,39,4),(68,2100.00,39,8),(69,7900.00,39,14),(70,2000.00,39,21),(71,2100.00,39,21),(72,8200.00,39,13),(73,123.00,39,22),(74,8300.00,39,4),(75,8300.00,39,13),(76,2200.00,39,8),(77,8200.00,39,17),(78,9000.00,39,14),(79,10000.00,39,14),(80,8200.01,39,17),(81,2200.01,39,8),(82,126.00,39,15),(83,8300.04,39,4),(84,2200.00,48,21),(85,2200.02,48,21),(86,127.00,60,15),(87,2200.03,39,21),(88,11100.00,39,5),(89,2200.04,39,21),(90,11140.00,85,5),(91,2200.05,86,21),(92,3801.00,86,20),(93,9200.01,86,10),(94,8300.05,86,4),(95,0.57,89,35),(96,0.57,89,36),(97,0.57,89,37),(98,0.25,90,38);
 /*!40000 ALTER TABLE `bid` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,7 +144,7 @@ CREATE TABLE `image` (
   PRIMARY KEY (`id`),
   KEY `fk_image_lot1_idx` (`lot_id`),
   CONSTRAINT `fk_image_lot1` FOREIGN KEY (`lot_id`) REFERENCES `lot` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Фотографии лота.';
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Фотографии лота.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,7 +153,7 @@ CREATE TABLE `image` (
 
 LOCK TABLES `image` WRITE;
 /*!40000 ALTER TABLE `image` DISABLE KEYS */;
-INSERT INTO `image` VALUES (1,'1',1),(2,'2',1),(3,'3',2),(4,'18',3),(5,'5',4),(6,'12',4),(7,'7',4),(8,'8',5),(9,'9',6),(10,'10',7),(11,'11',8),(12,'26',8),(13,'13',8),(14,'14',9),(15,'15',10),(16,'16',11),(17,'17',11),(18,'19',12),(19,'20',13),(20,'21',14),(21,'22',15),(22,'23',16),(23,'24',17),(24,'25',18),(25,'27',19),(26,'28',21),(27,'29',22),(28,'30',22);
+INSERT INTO `image` VALUES (29,'ed10be66-b1d1-4f8a-89a2-b54d46857067jpg',27),(30,'73796529-a00b-4694-846f-234db29006a6png',27),(31,'f839aae6-51e3-45c1-8903-80f8f3fc718epng',27),(32,'93337fd5-1af3-4ca5-b11c-42d07b5e9f18jpg',28),(33,'c34e1816-e9ee-49e0-9b23-acff79f265bbpng',28),(34,'a9b6b060-a949-4763-90a6-0d30d948936cpng',28),(35,'d51359e4-0db8-44a9-bab0-0d1dba1233a1png',29),(36,'28d7e1f3-b2c1-4a4b-a960-9a5dded434dapng',29),(37,'1571beda-78d3-4c1a-bb39-de5265b3f19cjpg',29),(38,'0ad7da49-71ec-40da-8de8-07620a09f54dpng',30),(39,'07d4c17d-7b41-4462-89c1-37d3201e1befpng',30),(40,'0e328d4b-a4f7-4693-9950-00eee9ea6420jpg',30),(41,'eb0e8a5d-fbda-403a-8b33-0a90d72c7c1cpng',31),(42,'6dbc5c88-1716-437a-92a6-c968f56aa294png',31),(43,'ee59ed05-1d50-4890-b065-c5b8422af6c2jpg',31),(44,'eab7d9c8-507a-4143-8525-25a9ccf8fdfcpng',32),(45,'894c5ac0-5b67-48d3-b83f-0453948c1c56png',32),(46,'df205072-0082-4225-9a6e-22f1be6678c1jpg',32),(47,'67e158ad-e722-426e-a9ee-6bb4d9e71d59png',33),(48,'23a4013d-269c-4654-9221-a3d7b2f6b210png',33),(49,'d6655f9d-ab11-4b59-b367-c03aa8ca982fjpg',33),(50,'b038afa1-9850-498b-ab72-c293d458a7d4png',34),(51,'091c1d42-1490-4512-bc7d-9db97a2c0644png',34),(52,'e6cda4e3-480c-442e-983e-96d6ca78b83ajpg',34),(53,'c8eefa71-43ad-4e55-98e2-80ea7f26c3bbpng',35),(54,'ad0d9528-3e59-46d4-a2c8-aed04d50ca05png',35),(55,'972eb83f-e750-4804-8181-0922862f19c0jpg',35),(56,'6bdcc35b-75e3-4956-9b3e-2520734a6596.png',36),(57,'1442d684-a411-40e0-96b3-1f4218d6bad1.png',36),(58,'e61176fb-787b-4973-9e1b-22c26ef726ad.jpg',36),(59,'2867f107-ff75-49ff-8c41-71d567ee12b3.png',37),(60,'aff3534c-0a0e-4768-9d7f-3dfb9024c0a8.png',37),(61,'1aa025eb-a903-4577-81be-7bdd9bf137ed.jpg',37),(62,'56cf07da-9165-458a-8d50-e6c45fd95b96.png',38),(63,'349d8435-0ba3-4993-84f0-da4a3af8ccbe.png',38),(64,'ce42c6a1-f18a-4424-863b-5e23e54c34df.jpg',38);
 /*!40000 ALTER TABLE `image` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,7 +180,7 @@ CREATE TABLE `lot` (
   CONSTRAINT `fk_Items_Categories1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
   CONSTRAINT `fk_lot_auction1` FOREIGN KEY (`auction_id`) REFERENCES `auction` (`id`),
   CONSTRAINT `fk_lot_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Лоты.';
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Лоты.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,7 +189,7 @@ CREATE TABLE `lot` (
 
 LOCK TABLES `lot` WRITE;
 /*!40000 ALTER TABLE `lot` DISABLE KEYS */;
-INSERT INTO `lot` VALUES (1,'Old french painting.','Author unknown. 16 century.',1,1,3,1,2),(2,'Socks','My old socks.',0,0,4,3,2),(3,'Paul Cezanne. Unknown.','Paul Cezanne\'s masterpice.',1,1,3,2,2),(4,'Ford truck.','F-150',1,0,6,4,1),(5,'Audi truck.','Q7',1,1,6,4,1),(6,'Chineese old sword.','Estimated 6 century.',1,0,24,16,6),(7,'Georges Seurat. Purple sky.','Georges Seurat\'s masterpice',1,0,3,2,2),(8,'Old nordic sword.','Estimated 11 century. Vikings used!',1,1,24,16,3),(9,'Fake ancient coin.','Valid looking.',0,0,22,17,13),(10,'Pickup truck.','Generic.',1,1,6,10,1),(11,'Ferrari coupe 125s.','First ever Ferrari car.',1,1,7,12,7),(12,'Ferrari coupe 375.','Old Ferrari classic.',1,0,7,12,7),(13,'Hoddles Creek 1er wine.','Fine wine.',1,1,16,8,10),(14,'Independent Birmingham Wine','Paul Roberts Wines.',1,0,16,8,10),(15,'Old greek coin','Found on seaside.',1,0,22,7,13),(16,'Convertible car','Generic',1,1,12,18,8),(17,'Sedan car.','Unknown japaneese model.',1,0,10,11,9),(18,'Belgian painting.','Edouard Agneessens 19 century.',1,0,3,7,4),(19,'Tang dynasty tomb figure','7 century.',1,1,4,7,5),(20,'Old indian sword','13 century.',1,0,24,15,11),(21,'Old turkish shield.','10 century.',1,1,24,13,12),(22,'Wheat option.','2020 april.',1,0,25,5,14);
+INSERT INTO `lot` VALUES (23,'Name','desc',0,0,3,89,1),(24,'Name','Desc',0,0,3,89,1),(25,'Name','Desc',0,0,3,89,2),(26,'Name','Desc',0,0,3,89,2),(27,'Something','Other',0,0,3,89,2),(28,'Som','Anothers',0,0,3,89,2),(29,'Ngfhdsjk','gvghskdbjf',0,0,3,89,1),(30,'ghdghdw','gdhkshdfdgh',0,0,3,89,2),(31,'fghjk','tfyiuo;retyiu',0,0,3,89,1),(32,'gjklsghciofh','hukkksjdho;;n;ofi',0,0,3,89,2),(33,'gdsuihgjiog;','uiiiyueqjrowi',0,0,3,89,1),(34,'heghwjdskl','ghkjlsndfjh',0,0,3,89,1),(35,'Name','Desription',1,0,3,89,1),(36,'Name','Desription',1,0,3,89,1),(37,'gfsjfhgdhghsakfhd','ghegdshdghjkgfdhjgds',0,0,3,89,2),(38,'Useless','Unknown',1,0,3,90,27);
 /*!40000 ALTER TABLE `lot` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,7 +211,7 @@ CREATE TABLE `user` (
   `frozen_money` decimal(20,2) unsigned NOT NULL COMMENT 'Замороженные средства пользователя. Средства замораживаются в этом поле при выставлении ставки.',
   PRIMARY KEY (`id`),
   UNIQUE KEY `login_UNIQUE` (`login`)
-) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Данные аккаунта пользователя.';
+) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Данные аккаунта пользователя.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -220,7 +220,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'hj@ttvb.ll','administrator','9c22a2e5ffc0933e34bc311a1328088e',0,0.00,0,0.00),(2,'cardealer@gmail.com','justCarGuy','74019031f5136b917b955a260c1a02ab',1,0.00,0,0.00),(3,'artfan@gmail.com','bestPainting','d75dc436493cc9fe8763c5ae7ccb8a4c',1,0.00,0,0.00),(4,'hotwheel@gmail.com','hotWheelCarBuyer','2e12262dbdfeb60f33f0081cfd3ee69c',1,0.00,0,0.00),(5,'productsupplyco@gmail.com','wheetDealer','30938519df811f26077965e41f5c5def',1,0.00,0,0.00),(6,'wholefoods@gmail.com','WholeFoodsFoodBuyer','2f055054b509659a493c87986fc07018',1,0.00,0,0.00),(7,'fineArts@gmail.com','fineArts','bb7c12020080ad5a4214846531a9967a',1,0.00,0,0.00),(8,'wineLover@gmail.com','wineLover','81ab922eafb0b011e7d561ce24305755',1,0.00,0,0.00),(9,'oldbottle@gmail.com','oldBottleDealership','23a660bccfcf5c93fd1f364ae31c6306',1,0.00,0,0.00),(10,'goodcarguydealership@gmail.com','goodCarGuy','2d15620a37d19895375073c188c6129f',1,0.00,0,0.00),(11,'fastcarsco@gmail.com','FastCarsCo','21e35a3d73c142208980601fcfbd8a5d',1,0.00,0,0.00),(12,'ferraridealership@gmail.com','FerrariBY','03bf2f41512cfc8678ec65a0cde8dded',1,0.00,0,0.00),(13,'oldsword@gmail.com','OldSword','0233c3eae7fd9d68a4ac0e7cfdf46fd1',1,0.00,0,0.00),(14,'ancientshield@gmail.com','AncientShield','ca64afdf0a306307d408fb8da5c3681b',1,0.00,0,0.00),(15,'historyweapon@gmail.com','HistoryWeapon','8ed1ec194664598452ddc2285b56f3a0',1,0.00,0,0.00),(16,'camelotGuy@gmail.com','camelotGuy','cc7f88911f283a5659d8faf56d6e0220',1,0.00,0,0.00),(17,'antiqueco@gmail.com','AntiqueCo','60cce3f7c6ed0c7eaf83e8ad994f887c',1,0.00,0,0.00),(18,'familycardealership@gmail.com','FamilyCarDealership','b19a3be69e7e13d387ec6d9eb3a90aa8',1,0.00,0,0.00),(19,'businesscarco@gmail.com','BusinessCarCo','f2d677aca0a5af047e0ac3c3dae1dbfd',1,0.00,0,0.00),(20,'trucksupplymasters@gmail.com','TruckSupplyMasters','73205a7cc5db0c7ee846b74880e85e7d',1,0.00,0,0.00),(21,'customer@gmail.com','customer','91ec1f9324753048c0096d036a694f86',1,0.00,0,0.00),(23,'user1@gmail.com','user1','24c9e15e52afc47c225b757e7bee1f9d',1,0.00,0,0.00),(24,'user2@gmail.com','user2','7e58d63b60197ceb55a1c487989a3720',1,0.00,0,0.00),(25,'user3@gmail.com','user3','92877af70a45fd6a2ed7fe81e1236b78',1,0.00,0,0.00),(26,'user4@gmail.com','user4','3f02ebe3d7929b091e3d8ccfde2f3bc6',1,0.00,0,0.00),(27,'user7@gmail.com','user7','02f68ddc37ebb49d112f2c90b4c27557',1,0.00,0,0.00),(28,'user8@gmail.com','user8','7668f673d5669995175ef91b5d171945',1,0.00,0,0.00),(29,'user10@gmail.com','user10','990d67a9f94696b1abe2dccf06900322',1,0.00,0,0.00),(30,'user11@gmail.com','user11','03aa1a0b0375b0461c1b8f35b234e67a',1,0.00,0,0.00),(32,'user20@gmail.com','user20','10880c7f4e4209eeda79711e1ea1723e',1,0.00,0,0.00),(33,'user22@gmail.com','user22','87dc1e131a1369fdf8f1c824a6a62dff',1,0.00,0,0.00),(34,'justCarGuy1@gmail.com','justCarGuy1','2192b082cabcae608753b4719000d5be',1,0.00,0,0.00),(35,'justCarGuy8@gmail.com','justCarGuy8','74019031f5136b917b955a260c1a02ab',1,0.00,0,0.00),(36,'someAcc@gmail.com','someAcc','89c0596da0d539cfdbcf58a0bbec9ae4',1,0.00,0,0.00),(37,'justCarGuy123@gmail.com','justCarGuy123','455fc7a23a01fb94446ce27a301dc39a',1,0.00,0,0.00),(39,'add@eew.cl','user123','5b36dc07c952bd540383494ffac97596',1,0.00,0,0.00),(40,'user1234@gmail.com','user1234','4b4f19147c33ab623f7fefb38b226ee8',1,0.00,0,0.00),(41,'some@mail.com','user12345','874017ffc07bcc47fa31438a84d3c5e7',1,0.00,0,0.00),(42,'user987@gmail.com','user987','d0798313436c94e4d0078d218573b831',1,0.00,0,0.00),(48,'123456user@gmail.com','123456user','18e40c81d76fed14261bc99f6b4b830d',1,0.00,0,0.00),(52,'bjtgr789@gmail.com','yis537A','390df9ace3d0dcdd4809b3d358018d1a',1,0.00,0,0.00),(53,'someone12345','someone12345@gmail.com','4b4028775877b5ddc24b3c311333cbed',1,0.00,0,0.00),(55,'user123','user123@gmail.com','4b9b377b3d733246a3be19f74b3cc618',1,0.00,0,0.00),(60,'some123','some123@gmail.com','a0f8254b9d22911adf387509e25710a1',1,0.00,0,0.00),(61,'User99','user99@ge.co','6df1f6e5400cdea0ca9f01090d0ac5f6',1,0.00,0,0.00),(62,'User111','user111@ge.co','fe552e6f78b91b3036b346c7dda8616a',1,0.00,0,0.00),(65,'User1234','User1234@gmail.com','8432d89975adb4b0c7254d07548631f8',1,0.00,0,0.00),(77,'User010@gg.cc','User010','c220075838b613531a29fa320d728fc1',1,0.00,0,0.00),(78,'User012@gg.cc','User012','d54378d2ebdca1445e0c94badacdd7ea',1,0.00,0,0.00),(80,'SQLdolphin@gmail.com','SQLdolphin','6158d568e03818c9161904413418ed85',1,0.00,0,0.00),(81,'qwerty@gmail.com','qwerty','ec31e27fb022b50d99c36ebe1c32eeb1',1,0.00,0,0.00),(82,'somqwerty@gmail.com','somqwerty','fbbf5aee5223a43de0732f4ec161dec4',1,0.00,0,0.00),(83,'HarryPotter@hogsmith.com','HarryPotter','ba1793c8cbe7d291e3e583e4fc61e3e5',1,0.00,0,0.00),(84,'User1234@some.com','User1234','6edf26f6e0badff12fca32b16db38bf2',1,0.00,0,0.00),(85,'User453@gmail.com','User453','c5192e42fdf26817e86f0576f9f9dea0',1,0.00,0,0.00),(86,'somethingother@comby','Register','37d2906761348e762d0c44d869bb5d75',1,1000000001.84,0,0.00),(87,'MyLittlePony@gmail.com','Magician','2d72ef083e8c626dd84d225b9d694d29',1,0.00,0,0.00),(88,'amazing@gmail.com','amazing','45e590bfc9d2390967b3ed7c011943c8',1,1.03,0,0.00);
+INSERT INTO `user` VALUES (1,'hj@ttvb.ll','administrator','9c22a2e5ffc0933e34bc311a1328088e',0,0.00,0,0.00),(89,'Register@gmail.com','Register','bffef5b042459d7cdd2c082c28bb171d',1,2000.00,0,0.00),(90,'max@gmail.com','Maksim','b58e9d3fb09e0d2df6965221a8716fd3',1,0.02,0,0.00);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -243,6 +243,30 @@ BEGIN
     DECLARE res TEXT;
     CALL getpath(cat_id, res);
     RETURN res;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `deleteLot` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteLot`(
+   delete_id BIGINT
+)
+    COMMENT 'A procedure to delete inactive lot'
+BEGIN 
+	DELETE FROM auction.lot WHERE auction.id = delete_id;
+    DELETE FROM auction.image WHERE image.lot_id = delete_id;
+    DELETE FROM auction.bid WHERE bid.lot_id = delete_id;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -320,4 +344,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-22 23:18:15
+-- Dump completed on 2018-10-25 10:13:24
