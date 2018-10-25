@@ -12,6 +12,9 @@ local.properties
 .loadpath
 .recommenders
 
+#tests
+test-output/
+
 # External tool builders
 .externalToolBuilders/
 
